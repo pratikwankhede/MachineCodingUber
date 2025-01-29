@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
+//Question link:
+// https://leetcode.com/discuss/interview-question/5838801/Uber-SDE-2-or-Phone-screen
 public class Counter
 {
     //seconds
