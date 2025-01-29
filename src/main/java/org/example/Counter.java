@@ -71,10 +71,27 @@ public class Counter
        }
     }
 
+    protected int countTest(int x, long cutoff)
+    {
+        if(map.containsKey(x))
+        {
+            ArrayList<Long> li = map.get(x);
+            //long cutoff = System.currentTimeMillis()-(1000*window);
+            return countAboveCutoffTime(cutoff,li);
+        }
+        else {
+            return -1;
+        }
+    }
+
     private int countAboveCutoffTime(long cutoff, ArrayList<Long> timedata)
     {
        long[] arr = new long[timedata.size()];
-       for(int i=0;i<arr.length;i++)arr[i]=timedata.get(i);
+       for(int i=0;i<arr.length;i++) {
+           arr[i] = timedata.get(i);
+           System.out.print(arr[i]+" ");
+       }
+       System.out.println();
        int ind = Arrays.binarySearch(arr,cutoff);
        int n = arr.length;
        int ans=-1;
